@@ -2,10 +2,27 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>Ghiblioteca</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
+      <img id="banner" src="images/PELUSA.jpg"><h1>Bienvenid@s a Ghiblioteca</h1><img id="banner" src="images/PELUSA.jpg">
+    </header>
+        <main>
+          <article>
+            <button id="mostrar-peliculas" class="botones" classname="afiche">Ver Peliculas</button>
+            <button id="mostrar-personajes" class="botones" classname="afiche">Ver Personajes</button>
+            <button id="mostrar-locaciones" class="botones" classname="afiche">Ver Locaciones</button>
+            <button id="mostrar-vehiculos" class="botones"classname="afiche">Ver Vehiculos</button>
+          </article><br>
+          <div><input type="search" id="busqueda" class="caja-busqueda"><button id="buscar" class="boton-buscar">Buscar</button>
+          </div><br><br>
+          <div id="contenedor-busqueda"></div>
+        </main>
+        <footer>
+      <p>Creadoras de la pagina, enlaces relacionas como instagram, face, etc.</p>
+    </footer>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
