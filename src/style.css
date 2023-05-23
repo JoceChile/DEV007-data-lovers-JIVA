@@ -3,6 +3,9 @@ body {
     text-align: center;
     background-color: #d4b5a9;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 #banner {
@@ -12,29 +15,43 @@ body {
     width: 60px;
     height: 60px;
     object-position: cover;
-    margin-top: 0;
+    margin-top: 10px;
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 80px;
     font-style: italic;
     display: inline-block;
-    color: #2e4744;
-    margin-top: 0;
+    color: #080808;
+    margin-top: 10px;
+}
+
+h4 {
+    text-align: justify;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: large;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+header {
+    background-image: url(Images/cerezo.jpg);
+    height: 100px;
 }
 
 #contenedor-busqueda {
     display: grid;
     border: #2e4744 solid 4px;
-    grid-template-columns: 350px 350px 350px 350px;
-    /* gap: 5px; */
-    margin-left: 48px;
-    margin-right: 45px;
+    grid-template-columns: 200px 200px 200px 200px;
+    gap: 25px;
+    margin-left: 245px;
+    margin-right: 220px;
 }
 
 img {
     width: 200px;
-    height: 260px;
+    height: 200px;
     object-position: cover;
 }
 
@@ -49,7 +66,20 @@ img {
     font-style: italic;
     width: 250px;
     height: 40px;
-    text-emphasis-color: #046684;
+    
+}
+
+.info {
+    display: inline-block;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    width: 600px;
+    height: 40px;
+    background-color: #a06468;
+    color: #e2dd3f;
+    border-radius: 2em;
+    font-size: 20px;
+    border: #2e4744 solid 3px;
 }
 
 .boton-buscar {
@@ -75,6 +105,20 @@ img {
 }
 
 footer {
-    align-items: end;
-    
+    padding: 1em 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.redes {
+    display: inline-block;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    width: 200px;
+    height: 30px;
+    background-color: #a06468;
+    color: #e2dd3f;
+    border-radius: 2em;
+    font-size: 15px;
+    border: #2e4744 solid 3px;
 }

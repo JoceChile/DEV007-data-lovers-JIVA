@@ -10,19 +10,26 @@
       <img id="banner" src="images/PELUSA.jpg"><h1>Bienvenid@s a Ghiblioteca</h1><img id="banner" src="images/PELUSA.jpg">
     </header>
         <main>
-          <article>
+          <h4 id="reseña">Studio Ghibli es un estudio de animación japonés, conocido por sus largometrajes animados como Mi vecino Totoro, El viaje de Chihiro o El castillo ambulante, entre otros grandes éxitos. 
+            Las animaciones tienen gran acogida a nivel mundial y algunas han recibido varias nominaciones y premios. De todo este fandom hay un grupo que desea poder interactuar y ver la información de las animaciones y sus personajes.</h4> 
+            <a href="https://es.wikipedia.org/wiki/Studio_Ghibli"><button id="info-Ghibli" class="info">Si quieres mas información sobre estudio Ghibli, haz click aqui!</button></a><br><br>
+            <article>
             <button id="mostrar-peliculas" class="botones" classname="afiche">Ver Peliculas</button>
             <button id="mostrar-personajes" class="botones" classname="afiche">Ver Personajes</button>
             <button id="mostrar-locaciones" class="botones" classname="afiche">Ver Locaciones</button>
-            <button id="mostrar-vehiculos" class="botones"classname="afiche">Ver Vehiculos</button>
+            <button id="mostrar-vehiculos" class="botones" classname="afiche">Ver Vehiculos</button>
           </article><br>
-          <div><input type="search" id="busqueda" class="caja-busqueda"><button id="buscar" class="boton-buscar">Buscar</button>
-          </div><br><br>
+          <div><input type="search" id="busqueda" class="caja-busqueda"><button id="buscar" class="boton-buscar">Buscar</button></div><br><br>
+          <div><select id="ordenar-select" class="botones"><option value="a-z">A-Z</option><option value="z-a">Z-A</option></select></div><br><br>
           <div id="contenedor-busqueda"></div>
         </main>
         <footer>
-      <p>Creadoras de la pagina, enlaces relacionas como instagram, face, etc.</p>
-    </footer>
+          <a href="https://www.instagram.com/ghibliusa/"><button id="instagram" class="redes">Instagram Ghibli</button></a>
+          <a href="https://www.facebook.com/GhibliUSA"><button id="facebook" class="redes">Facebook Ghibli</button></a>
+          <a href="https://www.tiktok.com/@studioghibli"><button id="tiktok" class="redes">Tik Tok Ghibli</button></a>
+          <a href="https://www.ghibli.jp/"><button id="pagina-web" class="redes">Pagina web Ghibli</button></a><br><br>
+          <a href="https://www.netflix.com/"><button id="netflix" class="info">Ve todas las peliculas de Studio Ghibli en Netflix. Crea tu cuenta aqui!</button></a>
+        </footer>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
