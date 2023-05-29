@@ -1,17 +1,17 @@
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
-    background-color: #d4b5a9;
+    background-color: #b8e4ff;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    flex: 1;
 }
 
-#banner {
+#hollin, #negro {
     filter: brightness(1.1);
     mix-blend-mode: multiply;
-    display: inline-block;  
     width: 60px;
     height: 60px;
     object-position: cover;
@@ -19,20 +19,33 @@ body {
 }
 
 h1 {
-    font-size: 80px;
+    font-size: 70px;
     font-style: italic;
     display: inline-block;
-    color: #080808;
+    color: #f38888;
     margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    -webkit-text-stroke: 2px black;
 }
 
 h4 {
     text-align: justify;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
-    font-size: large;
+    font-size: medium;
     margin-left: 25px;
     margin-right: 25px;
+}
+
+#ordenar, #filtrar {
+    
+    display: inline-block;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 40px;
+    margin-left: 25px;
+    margin-right: 25px;
+    color: #2e4744;
 }
 
 header {
@@ -66,7 +79,6 @@ img {
     font-style: italic;
     width: 250px;
     height: 40px;
-    
 }
 
 .info {
@@ -74,7 +86,7 @@ img {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
     width: 600px;
-    height: 40px;
+    height: 30px;
     background-color: #a06468;
     color: #e2dd3f;
     border-radius: 2em;
@@ -100,14 +112,20 @@ img {
     background-color: #a06468;
     color: #e2dd3f;
     border-radius: 2em;
-    font-size: 30px;
+    font-size: 20px;
     border: #2e4744 solid 3px;
+}
+
+input::placeholder {
+    color: #e2dd3f;
 }
 
 footer {
     padding: 1em 0;
     text-align: center;
     margin-top: auto;
+    background-image: url(Images/otra.jpg);
+    height: 100px;
 }
 
 .redes {
@@ -122,3 +140,18 @@ footer {
     font-size: 15px;
     border: #2e4744 solid 3px;
 }
+
+.rotten {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    width: 500px;
+    height: 25px;
+    background-color: #f3c4c7;
+    color: #242423;
+    border-radius: 2em;
+    font-size: 18px;
+    border: #2e4744 solid 2px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
