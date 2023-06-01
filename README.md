@@ -206,47 +206,48 @@ en la data.
 **4. Filtro Personajes:** Puedes acceder a todos los personajes que tenemos
 en la data.
 
-   * ![lab](imagenesReadMe/personajes.PNG)
+   * ![personajes](imagenesReadMe/personajes.PNG)
 
 **5. Filtro Locaciones:** Puedes acceder a todas las locaciones que tenemos
 en la data.
 
-   * ![lab](imagenesReadMe/locaciones.PNG)
+   * ![locaciones](imagenesReadMe/locaciones.PNG)
 
 **6. Filtro Vehiculos:** Puedes acceder a todos los vehiculos que tenemos
 en la data.
 
-   * ![lab](imagenesReadMe/vehiculos.PNG)
+   * ![vehiculos](imagenesReadMe/vehiculos.PNG)
 
 **7. Barra de busqueda:** Puedes acceder a las peliculas solo escribiendo
 una letra y te apareceran todas las que coincidan.
 
-   * ![lab](imagenesReadMe/barrabusqueda.PNG)
+   * ![barra](imagenesReadMe/barrabusqueda.PNG)
 
 **8. Ordenar A-Z y Z-A:** Puedes ordenar las peliculas de la A a la Z y
 viceversa.
 
-   * ![lab](imagenesReadMe/az.PNG)
-   * ![lab](imagenesReadMe/za.PNG)
+   * ![az](imagenesReadMe/az.PNG)
+   * ![za](imagenesReadMe/za.PNG)
 
 **9. Links en la web:** Nuestra web tambien te guia hacia mas lugares
 donde puedes obtener información de Studio Ghibli. Tenemos links de 
 Instagram, Facebook, Tik Tok, Pagina oficial de Ghibli, Wikipedia del
-<!-- Studio y AQUI DEBERIA INDICAR RT SCORE SI LOGRO FILTRAR. -->
+Studio y link donde muestra tabla de puntajes para Score de pelilculas.
 
-   * ![lab](imagenesReadMe/histlab.PNG)
+   * ![links](imagenesReadMe/links.png)
 
-**10. Test:** Se realizaron test a la web para optimizar su funcionamiento.
-Estos arrojaron 100% de aceptación.
-
-   * ![lab](imagenesReadMe/histlab.PNG)
-
-<!-- **11. Filtrar por puntaje:** Se realizaron encuestas en instagram, un 
+**10. Filtrar por puntaje:** Se realizaron encuestas en instagram, un 
 formulario de preguntas y los hallazgos entregados por Laboratoria.
 De esta información se decidieron principales puntos a tratar en la web:
 
-   * ![lab](imagenesReadMe/histlab.PNG) -->
+   * ![score](imagenesReadMe/score.png)
+   * ![scoredos](imagenesReadMe/scoredos.png)
 
+<!-- **10. Test:** Se realizaron test a la web para optimizar su funcionamiento.
+Estos arrojaron 100% de aceptación.
+
+   * ![test](imagenesReadMe/histlab.PNG)
+    -->
 ## 7. Material utilizado
 
 ### Contenido de referencia

@@ -1,4 +1,4 @@
-import { filtrarScore, filtrarPeliculas, filtrarPersonajes, filtrarLocaciones, filtrarVehiculos, ordenarPeliculasZA, ordenarPeliculasAZ } from './data.js';
+import { filtrarPeliculas, filtrarPersonajes, filtrarLocaciones, filtrarVehiculos, ordenarPeliculasZA, ordenarPeliculasAZ } from './data.js';
 import dataGhibli from './data/ghibli/ghibli.js';
 const todoGhibli = Object.values(dataGhibli.films);//para ver la data
 const contenedorBusqueda = document.getElementById("contenedor-busqueda");
@@ -9,6 +9,36 @@ const botonVehiculos = document.getElementById("mostrar-vehiculos");
 const selectPuntaje = document.getElementById("filtrarPuntaje");
 const cajaBuscar = document.getElementById("busqueda");
 
+const rt = () => {
+  contenedorBusqueda.innerHTML = "";
+  const tomates = selectPuntaje.value;//valor que elige
+  // console.log(tomates);//muestra el valor en consola
+  for (const puntaje of todoGhibli) {
+    const valores = puntaje.rt_score ;//todos los valores
+    // console.log(valores);
+    if (valores.indexOf(tomates) !== -1) {
+      contenedorBusqueda.innerHTML += `
+        <div class="afiche">
+        <img src="${puntaje.poster}"><br>
+        <h3>Title</h3>
+        <h2>${puntaje.title}</h2>
+        <h3>Descripcion</h3>
+        <p>${puntaje.description}</p>
+        <h3>Director</h3>
+        <p>${puntaje.director}</p>
+        <h3>Producer</h3>
+        <p>${puntaje.producer}</p>
+        <h3>Year</h3>
+        <p>${puntaje.release_date}</p>
+        <h3>Score</h3>
+        <p>${puntaje.rt_score}</p>
+        </div>
+      `;
+    }
+  }
+}
+selectPuntaje.addEventListener('change', rt);
+
 const buscar = () => {
   // console.log(cajaBuscar.value);
   contenedorBusqueda.innerHTML = "";
@@ -18,38 +48,28 @@ const buscar = () => {
     const title = uno.title.toLowerCase();
     if(title.indexOf(loQueBusca.toLowerCase()) !== -1) {
       contenedorBusqueda.innerHTML += `
-        <div class="afiche">
-        <img src="${uno.poster}"><br>
-        <h2>${uno.title}</h2>
-        <p>${uno.description}</p>
-        <h3>${uno.director}</h3>
-        <h3>${uno.producer}</h3>
-        <p>${uno.release_date}</p>
-        <p>${uno.rt_score}</p>
-        </div>
-       `;
+          <div class="afiche">
+          <img src="${uno.poster}"><br>
+          <h3>Title</h3>
+          <h2>${uno.title}</h2>
+          <h3>Descripcion</h3>
+          <p>${uno.description}</p>
+          <h3>Director</h3>
+          <p>${uno.director}</p>
+          <h3>Producer</h3>
+          <p>${uno.producer}</p>
+          <h3>Year</h3>
+          <p>${uno.release_date}</p>
+          <h3>Score</h3>
+          <p>${uno.rt_score}</p>
+          </div>
+      `;
     }
   }
 }
-// botonBuscar.addEventListener("click", buscar);
+
 cajaBuscar.addEventListener("keyup", buscar);
 
-selectPuntaje.addEventListener("change", function () {
-  contenedorBusqueda.innerHTML ="";
-  filtrarScore.forEach((rt_score) => {
-    contenedorBusqueda.innerHTML += `
-    <div class="afiche">
-        <img src="${rt_score.poster}"><br>
-        <h2>${rt_score.title}</h2>
-        <p>${rt_score.description}</p>
-        <h3>${rt_score.director}</h3>
-        <h3>${rt_score.producer}</h3>
-        <p>${rt_score.release_date}</p>
-        <p>${rt_score.rt_score}</p>
-        </div>
-    `;
-  })
-});
 //boton para ver peliculas
 botonPeliculas.addEventListener("click", function () {
   contenedorBusqueda.innerHTML = "";
@@ -57,11 +77,17 @@ botonPeliculas.addEventListener("click", function () {
     contenedorBusqueda.innerHTML += `
         <div class="afiche">
         <img src="${title.poster}"><br>
+        <h3>Title</h3>
         <h2>${title.title}</h2>
+        <h3>Descripcion</h3>
         <p>${title.description}</p>
-        <h3>${title.director}</h3>
-        <h3>${title.producer}</h3>
+        <h3>Director</h3>
+        <p>${title.director}</p>
+        <h3>Producer</h3>
+        <p>${title.producer}</p>
+        <h3>Year</h3>
         <p>${title.release_date}</p>
+        <h3>Score</h3>
         <p>${title.rt_score}</p>
         </div>
     `;
@@ -74,16 +100,22 @@ botonPersonajes.addEventListener("click", function () {
   filtrarPersonajes.forEach((film) => {
     film.people.forEach(people => {
       contenedorBusqueda.innerHTML += `
-            <div class="afiche">
-            <img src="${people.img}"><br>
-            <h2>${people.name}</h2>
-            <h3>${people.gender}</h3>
-            <h3>${people.age}</h3>
-            <h3>${people.eye_color}</h3>
-            <h3>${people.hair_color}</h3>
-            <p>${people.specie}</p>
-            </div>
-            `;  
+          <div class="afiche">
+          <img src="${people.img}"><br>
+          <h3>Name</h3>
+          <h2>${people.name}</h2>
+          <h3>Gender</h3>
+          <p>${people.gender}</p>
+          <h3>Age</h3>
+          <p>${people.age}</p>
+          <h3>Eye color</h3>
+          <p>${people.eye_color}</p>
+          <h3>Hair color</h3>
+          <p>${people.hair_color}</p>
+          <h3>Specie</h3>
+          <p>${people.specie}</p>
+          </div>
+      `;  
     })
   });
 });
@@ -94,14 +126,18 @@ botonLocaciones.addEventListener("click", function () {
   filtrarLocaciones.forEach((film) => {
     film.locations.forEach(locations => {
       contenedorBusqueda.innerHTML += `
-        <div class="afiche">
-        <img src="${locations.img}"><br>
-        <h2>${locations.name}</h2>
-        <h3>${locations.climate}</h3>
-        <h3>${locations.terrain}</h3>
-        <h3>${locations.surface_water}</h3>
-        </div>
-        `;
+          <div class="afiche">
+          <img src="${locations.img}"><br>
+          <h3>Name</h3>
+          <h2>${locations.name}</h2>
+          <h3>Climate</h3>
+          <p>${locations.climate}</p>
+          <h3>Terrain</h3>
+          <p>${locations.terrain}</p>
+          <h3>Surface water</h3>
+          <p>${locations.surface_water}</p>
+          </div>
+      `;
     })
   })
 });
@@ -113,15 +149,20 @@ botonVehiculos.addEventListener("click", function () {
   filtrarVehiculos.forEach((film) => {
     film.vehicles.forEach(vehicles => {
       contenedorBusqueda.innerHTML += `
-        <div class="afiche">
-        <img src="${vehicles.img}"><br>
-        <h2>${vehicles.name}</h2>
-        <p>${vehicles.description}</p>
-        <h3>${vehicles.vehicle_class}</h3>
-        <h3>${vehicles.length}</h3>
-        <h3>${vehicles.pilot.name}</h3>
-        </div>
-        `;
+          <div class="afiche">
+          <img src="${vehicles.img}"><br>
+          <h3>Name</h3>
+          <h2>${vehicles.name}</h2>
+          <h3>Descripcion</h3>
+          <p>${vehicles.description}</p>
+          <h3>Vehicle class</h3>
+          <p>${vehicles.vehicle_class}</p>
+          <h3>Length</h3>
+          <p>${vehicles.length}</p>
+          <h3>Pilot</h3>
+          <p>${vehicles.pilot.name}</p>
+          </div>
+      `;
     })
   });
 });
@@ -142,15 +183,19 @@ selectElement.addEventListener("change", function () {
     contenedorBusqueda.innerHTML += `
         <div class="afiche">
         <img src="${title.poster}"><br>
+        <h3>Title</h3>
         <h2>${title.title}</h2>
+        <h3>Descripcion</h3>
         <p>${title.description}</p>
-        <h3>${title.director}</h3>
-        <h3>${title.producer}</h3>
+        <h3>Director</h3>
+        <p>${title.director}</p>
+        <h3>Producer</h3>
+        <p>${title.producer}</p>
+        <h3>Year</h3>
         <p>${title.release_date}</p>
+        <h3>Score</h3>
         <p>${title.rt_score}</p>
         </div>
     `;
   });
-});
-
-
+})

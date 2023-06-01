@@ -37,7 +37,7 @@ h4 {
     margin-right: 25px;
 }
 
-#ordenar, #filtrar {
+#ordenar {
     
     display: inline-block;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -46,6 +46,19 @@ h4 {
     margin-left: 25px;
     margin-right: 25px;
     color: #2e4744;
+}
+
+#filtrarPuntaje {
+    
+    display: inline-block;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    color: #e2dd3f;
+    width: 400px;
+    height: 40px;
 }
 
 header {
@@ -94,13 +107,6 @@ img {
     border: #2e4744 solid 3px;
 }
 
-.boton-buscar {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic;
-    width: 250px;
-    height: 40px;
-}
-
 .caja-busqueda {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
@@ -108,7 +114,7 @@ img {
     height: 40px;
 }
 
-.botones, .boton-buscar, .caja-busqueda {
+.botones, .caja-busqueda {
     background-color: #a06468;
     color: #e2dd3f;
     border-radius: 2em;
