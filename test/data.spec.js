@@ -1,5 +1,7 @@
 import { filtrarPeliculas , filtrarPersonajes, filtrarLocaciones, filtrarVehiculos, ordenarPeliculasAZ, ordenarPeliculasZA } from '../src/data.js';
-// import { example, anotherExample } from '../src/data.js';
+import dataGhibli from '../src/data/ghibli/ghibli.js';
+const todoGhibli = Object.values(dataGhibli.films);
+
 const result = [
   {
     "id": "2baf70d1-42bb-4437-b551-e5fed5a87abe",
@@ -20,7 +22,13 @@ describe('ordenarPeliculasAZ', () => {
     expect(typeof ordenarPeliculasAZ).toBe('function')
   });
   it('debe devolver array ordenado', () => {
-    expect(Array.isArray(ordenarPeliculasAZ(result, "Castle in the Sky"))).toBe(true);
+    const verificar = {
+      "id": "2baf70d1-42bb-4437-b551-e5fed5a87abe",
+      "title": "Castle in the Sky",
+      "description": "The orphan Sheeta inherited a mysterious crystal that links her to the mythical sky-kingdom of Laputa. With the help of resourceful Pazu and a rollicking band of sky pirates, she makes her way to the ruins of the once-great civilization. Sheeta and Pazu must outwit the evil Muska, who plans to use Laputa's science to make himself ruler of the world.",
+      "director": "Hayao Miyazaki",
+    }
+    expect(ordenarPeliculasAZ(result)).toEqual(verificar);
   });
 });
 
@@ -32,7 +40,7 @@ describe('ordenarPeliculasZA', () => {
     expect(Array.isArray(ordenarPeliculasZA(result, ["Castle in the Sky", "My Neighbor Totoro"]))).toBe(true);
   });
   it('debería devolver un array', () => {
-    expect(Array(ordenarPeliculasZA(result))).toBe(true);
+    expect(Array(ordenarPeliculasZA(todoGhibli, result))).toBe(true);
   });
 });
 

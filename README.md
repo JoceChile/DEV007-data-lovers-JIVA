@@ -243,11 +243,6 @@ De esta información se decidieron principales puntos a tratar en la web:
    * ![score](imagenesReadMe/score.png)
    * ![scoredos](imagenesReadMe/scoredos.png)
 
-<!-- **10. Test:** Se realizaron test a la web para optimizar su funcionamiento.
-Estos arrojaron 100% de aceptación.
-
-   * ![test](imagenesReadMe/histlab.PNG)
-    -->
 ## 7. Material utilizado
 
 ### Contenido de referencia
